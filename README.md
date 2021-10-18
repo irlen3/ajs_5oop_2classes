@@ -1,2 +1,2 @@
 # ajs_5oop_2classes
-https://ci.appveyor.com/api/github/webhook?id=5k135sd0pagrftuy
+[![Build status](https://ci.appveyor.com/api/projects/status/xj3j3n8j9jkhq61o?svg=true)](https://ci.appveyor.com/project/irlen3/ajs-5oop-2classes)
