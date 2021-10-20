@@ -4,26 +4,26 @@ export default class Character {
     this.type = type; // тип
     this.health = 100; // уровень жизни
     this.level = 1; // уровень персонажа
-    this.attack = 0; // атака
-    this.defence = 0; // защита
-    this.checkErrorName();
-    this.checkErrorType();
+    this.attack; // атака
+    this.defence; // защита
+    this.checkErrorName(name);
+    this.checkErrorType(type);
   }
 
-  checkErrorName() {
-    console.log('game started');
-    if (typeof this.name !== 'string' || this.name.length < 2 || this.name.length > 10) {
-      console.log('недопустимые значения имени');
+  checkErrorName(name) {
+    if (typeof name !== 'string' || name.length < 2 || name.length > 10) {
       throw new Error('недопустимые значения имени');
+    } else {
+      this.name = name;
     }
   }
 
-  checkErrorType() {
-    if (this.type !== 'Bowerman' && this.type !== 'Swordsman' && this.type !== 'Magician'
-    && this.type !== 'Daemon' && this.type !== 'Undead' && this.type !== 'Zombie') {
-      console.log('недопустимые значения типа');
-      console.log(this.type === 'Swordsman');
+  checkErrorType(type) {
+    const masTypes = ['Bowerman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+    if (!masTypes.includes(type)) {
       throw new Error('недопустимые значения типа');
+    } else {
+      this.type = type;
     }
   }
 
