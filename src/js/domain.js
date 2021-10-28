@@ -4,8 +4,6 @@ export default class Character {
     this.type = type; // тип
     this.health = 100; // уровень жизни
     this.level = 1; // уровень персонажа
-    this.attack = 0; // атака
-    this.defence = 0; // защита
     this.checkErrorName(name);
     this.checkErrorType(type);
   }
